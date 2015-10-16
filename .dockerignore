@@ -1,0 +1,5 @@
+.git/
+.vagrantfile/
+
+[Vv]agrantfile
+*.md
