@@ -1,0 +1,3 @@
+# CollinsonGroup/TeamCity
+
+TeamCity....Dockerized.
