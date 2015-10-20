@@ -7,13 +7,13 @@ The container is a simple installation of TeamCity 9.X. At present, the changes 
 - Includes the MS SQL JDBC4 driver
 - Includes git and svn
 
-The container splits out the folders in the TeamCity data folder so that they can be seperately mounted giving you some flexability to the location of these files. 
+The container splits out the folders in the TeamCity data folder so that they can be separately mounted giving you some flexibility to the location of these files.
 
 Under the hood it is running Alpine Linux with JDK 1.8.
 
-## Running 
+## Running
 
-To run the container to start up a sinple instance of TeamCity with an internal data store, you'll only need to specify the port. The container exposes a single port *8111* for accessing TeamCity. Start up the container as:
+To run the container to start up a simple instance of TeamCity with an internal data store, you'll only need to specify the port. The container exposes a single port *8111* for accessing TeamCity. Start up the container as:
 
 ```bash
 > docker run -d --name teamcity -p 8111:8111 collinsongroup/teamcity
@@ -23,7 +23,7 @@ You will now have a container running as **teamcity** listening on port 8111. Yo
 
 Once the container is destroyed you will **lose** all data, config, artifacts, builds, and love and care that you've put into setting up.
 
-The container also exposes multiple volumes for the TeamCity data folder (but not the whole data folder itself): 
+The container also exposes multiple volumes for the TeamCity data folder (but not the whole data folder itself):
 - /var/lib/teamcity/config
 - /var/lib/teamcity/plugins
 - /var/lib/teamcity/lib
