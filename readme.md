@@ -2,7 +2,7 @@
 
 TeamCity....Dockerized.
 
-The container includes the MS SQL JDBC4 driver.
+The container is a simple installation of TeamCity 9.X. At present, the only addition is including the MS SQL JDBC4 driver.
 
 ## Running 
 
