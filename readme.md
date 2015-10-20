@@ -4,9 +4,12 @@ TeamCity....Dockerized.
 
 The container is a simple installation of TeamCity 9.X. At present, the changes from default are:
 - Set to recommended memory settings (1GB heap, 270MB perm space)
-- Included the MS SQL JDBC4 driver
+- Includes the MS SQL JDBC4 driver
+- Includes git and svn
 
 The container splits out the folders in the TeamCity data folder so that they can be seperately mounted giving you some flexability to the location of these files. 
+
+Under the hood it is running Alpine Linux with JDK 1.8.
 
 ## Running 
 

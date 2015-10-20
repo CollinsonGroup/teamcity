@@ -2,10 +2,12 @@ FROM delitescere/jdk
 MAINTAINER mark.turner@collinsongroup.com
 
 # Create installation location
+# Update & add git
 # Create data & config folder
 # Download TC and install to default location
 # Add the MS SQL JDBC driver
 RUN mkdir -p /opt/scripts && \
+apk update && apk add git subversion && \
 mkdir -p /var/lib/teamcity/config /var/lib/teamcity/lib/jdbc /tmp/jdbc && \
 curl -L https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/sqljdbc_4.2.6420.100_enu.tar.gz | tar -xz -C /tmp/jdbc sqljdbc_4.2/enu/sqljdbc4.jar && find /tmp/jdbc/sqljdbc_4.2/enu/ -name '*.jar' -exec mv {} /var/lib/teamcity/lib/jdbc \+ && rm -rf /tmp/jdbc && \
 curl -L https://download.jetbrains.com/teamcity/TeamCity-9.1.3.tar.gz | tar -xz -C /opt
