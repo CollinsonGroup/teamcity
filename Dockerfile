@@ -27,6 +27,7 @@ VOLUME /var/lib/teamcity/plugins
 VOLUME /var/lib/teamcity/backup
 VOLUME /var/lib/teamcity/lib
 VOLUME /var/lib/teamcity/keys
+VOLUME /opt/TeamCity/logs
 
 # Expose the standard TeamCity port
 EXPOSE 8111

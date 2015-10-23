@@ -29,10 +29,13 @@ The container also exposes multiple volumes for the TeamCity data folder (but no
 - /var/lib/teamcity/lib
 - /var/lib/teamcity/keys
 - /var/lib/teamcity/backup
+- /opt/TeamCity/logs
 
 This gives you some flexibility to override the parts that you want to keep locally. Some of the folders, like lib, would contain items such as the included JDBC driver which would be lost when you override the folder.  
 
 **Mounting at least the config folder to somewhere local is heavily advised. If you don't do this, when you remove the container, you will lose everything!**
+
+**If you are migrating an existing instance of TeamCity, ensure that you are using the default paths in your config prior to using the container otherwise you won't have access to the folders and it will not work correctly.**
 
 Override the folders as usual with Docker:
 
